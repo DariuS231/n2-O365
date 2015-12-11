@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>A SPA sample demonstrating Azure AD and ADAL Angular2</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
 </head>
 
 <body>
     <o365-app>Loading...</o365-app>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.7/js/adal.min.js"></script>
+<script src="/assets/js/jQuery/1.11.1/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/adal/1.0.7/adal.min.js"></script>
 
 <!-- ES6-related imports -->
-<script src="/dist/lib/es6-shim.min.js"></script>
-<script src="/dist/lib/system.js"></script>
+<script src="/assets/js/es6-shim.min.js"></script>
+<script src="/assets/js/system.js"></script>
 
 
 <script>
-    //configure system loader
     System.config({defaultJSExtensions: true});
 </script>
-<script src="/dist/lib/angular2.min.js"></script>
-<script src="/dist/lib/http.min.js"></script>
-<script src="/dist/lib/router.min.js"></script>
+<script src="/assets/js/angular2.min.js"></script>
+<script src="/assets/js/http.min.js"></script>
+<script src="/assets/js/router.min.js"></script>
 
 <script>
-    //bootstrap the Angular2 application
     System.import('dist/app').catch(console.log.bind(console));
 </script>
 

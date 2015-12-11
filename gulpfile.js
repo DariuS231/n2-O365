@@ -22,7 +22,7 @@ gulp.task('ts2js', function () {
     var typescript = require('gulp-typescript');
     var tscConfig = require('./tsconfig.json');
 
-    gulp.src(libs).pipe(gulp.dest('dist/lib'));
+    gulp.src(libs).pipe(gulp.dest('assets/js'));
     gulp.src([PATHS.srcFiles, '!' + PATHS.srcTsFiles]).pipe(gulp.dest('dist'));
 
     var tsResult = gulp.src(PATHS.srcTsFiles).pipe(typescript(tscConfig.compilerOptions));
