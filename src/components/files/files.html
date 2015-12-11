@@ -18,7 +18,7 @@
                 </thead>
                 <tbody class="data-container">
                     <tr *ng-for="#file of files">
-                        <td class="view-data-claim">{{!!file.folder ? "Folder" : "File"}}</td>
+                        <td class="view-data-claim">{{getTypeString(file.folder)}}</td>
                         <td class="view-data-value">{{file.name}}</td>
                     </tr>
                 </tbody>

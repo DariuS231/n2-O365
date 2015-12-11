@@ -19,4 +19,7 @@ export class Files extends baseComponent {
             this.files = data.value;
         });
     }
+    public getTypeString = (folderObj: any) : string => {
+        return !!folderObj ? "Folder" : "File";
+    }
 }

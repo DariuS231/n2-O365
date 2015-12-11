@@ -10,35 +10,33 @@ import {Files} from './components/files/files';
 import {Messages} from './components/messages/messages';
 
 @RouteConfig([
-	{ path: '', redirectTo: ['/Home'] },
-	{ path: '/home', component: Home, as: 'Home' },
-	{ path: '/user', component: User, as: 'User' },
-	{ path: '/files', component: Files, as: 'Files' },
-	{ path: '/messages', component: Messages, as: 'Messages' }
+    { path: '', redirectTo: ['/Home'] },
+    { path: '/home', component: Home, as: 'Home' },
+    { path: '/user', component: User, as: 'User' },
+    { path: '/files', component: Files, as: 'Files' },
+    { path: '/messages', component: Messages, as: 'Messages' }
 ])
 @Component({
     selector: 'o365-app',
-	viewBindings: [o365Adal],
-	directives: [Home, User, Files, Messages, ROUTER_DIRECTIVES],
+    viewBindings: [o365Adal],
+    directives: [Home, User, Files, Messages, ROUTER_DIRECTIVES],
     templateUrl:'/dist/layouts/main.html'
 })
-export class O365App  {
+export class O365App extends baseComponent {
     router: Router;
     location: Location;
-    adalService: o365Adal;
     constructor(router: Router, location: Location,  service: o365Adal){
-		this.adalService = service;
-		//super(service, false);
-		this.router = router;
-	   	this.location = location;
+        super(service, false);
+        this.router = router;
+        this.location = location;
     }
-	public getLinkStyle(path) {
+    public getLinkStyle = (path: string): boolean => {
         return this.location.path() === path;
     }  
-    public adalLogIn() {
+    public adalLogIn = (): void => {
         this.adalService.authContext.login();
     }
-    public adalLogOut() {
+    public adalLogOut = (): void => {
         this.adalService.authContext.logOut();
     }
 }

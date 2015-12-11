@@ -4,8 +4,8 @@ import { Injectable } from 'angular2/angular2';
 @Injectable()
 export class o365Adal  {
     private config: any = {
-        tenant: '[YOURTENANT].onmicrosoft.com', 
-        clientId: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', // Azure AD application client ID
+        tenant: 'yourTenant.onmicrosoft.com', //Office 365 tenant
+        clientId: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', //GUID gotten from the Azure active directory application
         postLogoutRedirectUri: window.location.origin,
         endpoints: {
             officeGraph: 'https://graph.microsoft.com'
@@ -52,7 +52,7 @@ export class o365Adal  {
         }
     }
 
-    private tokenPromise = (endpoint): Promise<string> => {
+    private tokenPromise = (endpoint: string): Promise<string> => {
         var p = new Promise<string>((resolve, reject) => {
             this.authContext.acquireToken(endpoint, function (error, token) {
                 if (error || !token) {
