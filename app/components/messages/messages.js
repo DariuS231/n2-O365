@@ -35,6 +35,9 @@ System.register(['angular2/core', 'angular2/common', './../../services/o365Adal'
                 function Messages(adalService) {
                     var _this = this;
                     _super.call(this, adalService, true);
+                    this.getDateObject = function (dateStr) {
+                        return new Date(dateStr);
+                    };
                     this.messages = new Array();
                     this.adalService.getRequestPromise("/beta/me/messages").then(function (data) {
                         _this.messages = data.value;

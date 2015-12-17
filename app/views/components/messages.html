@@ -19,7 +19,7 @@
                 </thead>
                 <tbody class="data-container">
                     <tr *ngFor="#message of messages">
-                        <td class="view-data-claim">{{message.sentDateTime}}</td>
+                        <td class="view-data-claim">{{(getDateObject(message.sentDateTime)) | date }}</td>
                         <td class="view-data-claim">{{message.from.emailAddress.name}}</td>
                         <td class="view-data-value">{{message.subject}}</td>
                     </tr>

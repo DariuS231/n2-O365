@@ -18,4 +18,7 @@ export class Messages extends baseComponent{
             this.messages = data.value;
         });
     }
+    public getDateObject = (dateStr: string) : Date => {
+        return new Date(dateStr);
+    }
 }
