@@ -1,7 +1,7 @@
 {
   "name": "ng2-o365",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample demonstrating Azure AD and ADAL Angular2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DariuS231/n2-O365.git"

@@ -1,6 +1,8 @@
 # ng2-O365
 
+This sample demonstrates how implement ADAL JS to an application built with Angular2.
 
+This sample also demonstrates configure the angular 2 router engine and how to make HTTP requests to the Office 365 APIs.
 
 ## Install
 
