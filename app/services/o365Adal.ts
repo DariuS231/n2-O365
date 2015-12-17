@@ -1,11 +1,11 @@
-import {Http, Headers} from 'angular2/http';
-import { Injectable } from 'angular2/angular2';
+import { Http, Headers } from 'angular2/http';
+import { Injectable } from 'angular2/core';
 
 @Injectable()
 export class o365Adal  {
     private config: any = {
-        tenant: 'yourTenant.onmicrosoft.com', //Office 365 tenant
-        clientId: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', //GUID gotten from the Azure active directory application
+        tenant: 'dariuscc.onmicrosoft.com',
+        clientId: 'e41cc4b1-c8dd-458f-a8a5-663bb1876c42',// Azure AD application client ID
         postLogoutRedirectUri: window.location.origin,
         endpoints: {
             officeGraph: 'https://graph.microsoft.com'

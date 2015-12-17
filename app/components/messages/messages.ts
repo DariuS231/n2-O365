@@ -1,4 +1,5 @@
-import {Component, NgFor} from 'angular2/angular2';
+import {Component} from 'angular2/core';
+import {NgFor} from 'angular2/common';
 import {o365Adal} from './../../services/o365Adal';
 import {baseComponent} from './../../commons/baseComponent';
 
@@ -6,7 +7,7 @@ import {baseComponent} from './../../commons/baseComponent';
     selector: 'Messages',
 	viewBindings: [o365Adal],
 	directives: [NgFor],
-    templateUrl:'/dist/components/messages/messages.html'
+    templateUrl: '/app/views/components/messages.html'
 })
 export class Messages extends baseComponent{
     messages: Array<any>;
