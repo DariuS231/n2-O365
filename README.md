@@ -8,7 +8,7 @@ This sample also demonstrates configure the angular 2 router engine and how to m
 
 Clone this repo and execute in your favourite shell:
 
-* `pm install typescript live-server -g` to install Install global pre-requisites
+* `mpm install typescript live-server -g` to install Install global pre-requisites
 * `npm install` to install local npm dependencies
 
 ## Play
