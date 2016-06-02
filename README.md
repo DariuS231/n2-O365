@@ -16,3 +16,9 @@ Clone this repo and execute in your favourite shell:
 After completing installation type in your favourite shell:
 
 * `npm start` to start the application. App files are observed and will be re-transpiled on each change.
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2016 beckettkev
