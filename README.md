@@ -21,4 +21,4 @@ After completing installation type in your favourite shell:
 
 The MIT License (MIT)
 
-Copyright (c) 2016 beckettkev
+Copyright (c) 2016 darius231
